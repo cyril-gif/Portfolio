@@ -280,12 +280,13 @@ navMenu.addEventListener('keydown', (e) => {
 });
 
 // -----------------------------
-// Console greeting (fun touch)
+// Console greeting
 // -----------------------------
-console.log('%c🚀 Pascal Lantam Gbate Portfolio', 'font-size: 20px; font-weight: bold; color: #f59e0b;');
-console.log('%cFull-Stack Developer & Business Support Specialist', 'font-size: 14px; color: #c0c0d0;');
-console.log('%c📍 Based in Upper West Region, Ghana', 'font-size: 14px; color: #c0c0d0;');
-console.log('%c👋 Thanks for checking out my portfolio!', 'font-size: 14px; color: #f0f0f5;');
+console.log('%c🚀 Pascal Lantam Gbate Portfolio', 'font-size: 20px; font-weight: bold; color: #38bdf8;');
+console.log('%cFull-Stack Developer & Business Support Specialist', 'font-size: 14px; color: #1a1a2e;');
+console.log('%c📍 Based in Upper West Region, Ghana', 'font-size: 14px; color: #2d2d44;');
+console.log('%c☀️ Clean White & Sky Blue Theme', 'font-size: 14px; color: #38bdf8;');
+console.log('%c👋 Thanks for checking out my portfolio!', 'font-size: 14px; color: #1a1a2e;');
 
 // -----------------------------
 // Performance: Lazy load images with Intersection Observer
@@ -319,7 +320,7 @@ window.addEventListener('resize', () => {
 });
 
 // -----------------------------
-// Parallax effect on hero background (optional)
+// Parallax effect on hero background
 // -----------------------------
 const heroBg = document.querySelector('.hero-bg');
 const heroBg2 = document.querySelector('.hero-bg-2');
