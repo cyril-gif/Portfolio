@@ -1424,4 +1424,123 @@ ul {
   .why-grid {
     grid-template-columns: 1fr;
   }
+/* ============================================
+   Development Process - Right to Left Scroll
+   ============================================ */
+.process {
+  padding: var(--section-padding);
+  background: var(--bg-primary);
+  overflow: hidden;
 }
+
+.process-scroll-wrapper {
+  overflow: hidden;
+  position: relative;
+  padding: 10px 0;
+}
+
+.process-scroll-track {
+  display: flex;
+  gap: 30px;
+  animation: scrollRightToLeft 30s linear infinite;
+  width: max-content;
+}
+
+.process-scroll-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollRightToLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.process-step {
+  flex: 0 0 auto;
+  width: 260px;
+  text-align: center;
+  padding: 30px 24px;
+  background: var(--bg-secondary);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  transition: all var(--transition);
+}
+
+.process-step:hover {
+  border-color: var(--accent);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px var(--shadow-color);
+}
+
+.process-number {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: var(--accent);
+  opacity: 0.4;
+  margin-bottom: 10px;
+  font-family: var(--font-mono);
+}
+
+.process-step h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.process-step p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Hover pause for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .process-scroll-track {
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .process-step {
+    width: 220px;
+  }
+}
+
+/* ============================================
+   Responsive for Process
+   ============================================ */
+@media (max-width: 768px) {
+  .process-step {
+    width: 220px;
+    padding: 24px 16px;
+  }
+  
+  .process-scroll-track {
+    gap: 20px;
+    animation-duration: 25s;
+  }
+  
+  .process-number {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .process-step {
+    width: 200px;
+    padding: 20px 14px;
+  }
+  
+  .process-scroll-track {
+    gap: 16px;
+    animation-duration: 20s;
+  }
+}
+
+
