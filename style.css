@@ -1306,3 +1306,122 @@ ul {
 .delay-4 {
   transition-delay: 0.4s;
 }
+/* ============================================
+   Process Section
+   ============================================ */
+.process {
+  padding: var(--section-padding);
+  background: var(--bg-primary);
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.process-step {
+  text-align: center;
+  padding: 30px 20px;
+  background: var(--bg-secondary);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  transition: all var(--transition);
+}
+
+.process-step:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px var(--shadow-color);
+}
+
+.process-number {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--accent);
+  opacity: 0.5;
+  margin-bottom: 10px;
+  font-family: var(--font-mono);
+}
+
+.process-step h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.process-step p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* ============================================
+   Why Choose Me Section
+   ============================================ */
+.why-me {
+  padding: var(--section-padding);
+  background: var(--bg-secondary);
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.why-item {
+  text-align: center;
+  padding: 24px 20px;
+  background: var(--bg-card);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  transition: all var(--transition);
+}
+
+.why-item:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.why-item i {
+  font-size: 2rem;
+  color: var(--accent-dark);
+  margin-bottom: 12px;
+}
+
+.why-item h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--text-primary);
+}
+
+.why-item p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* ============================================
+   Responsive for Process & Why Me
+   ============================================ */
+@media (max-width: 768px) {
+  .process-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .why-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+}
